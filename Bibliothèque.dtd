@@ -1,0 +1,23 @@
+<!DOCTYPE Bibliotheque [
+<!ELEMENT Bibliotheque (Livres, Utilisateurs, Emprunts)>
+<!ELEMENT Livres (Livre+)>
+<!ELEMENT Livre (Titre, Auteur, Genre, Annee)>
+<!ELEMENT Titre (#PCDATA)>
+<!ELEMENT Auteur (#PCDATA)>
+<!ELEMENT Genre (#PCDATA)>
+<!ELEMENT Annee (#PCDATA)>
+
+<!ELEMENT Utilisateurs (Utilisateur+)>
+<!ELEMENT Utilisateur (Nom, Prenom, Email, Role)>
+<!ELEMENT Nom (#PCDATA)>
+<!ELEMENT Prenom (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Role (#PCDATA)>
+
+<!ELEMENT Emprunts (Emprunt+)>
+<!ELEMENT Emprunt (Utilisateur, Livre, DateEmprunt, DateRetour)>
+<!ELEMENT DateEmprunt (#PCDATA)>
+<!ELEMENT DateRetour (#PCDATA)>
+]>
+
+

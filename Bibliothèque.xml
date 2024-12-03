@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Bibliotheque">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Livres">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Livre" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Titre" type="xs:string"/>
+                    <xs:element name="Auteur" type="xs:string"/>
+                    <xs:element name="Genre" type="xs:string"/>
+                    <xs:element name="Annee" type="xs:int"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Utilisateurs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Utilisateur" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Nom" type="xs:string"/>
+                    <xs:element name="Prenom" type="xs:string"/>
+                    <xs:element name="Email" type="xs:string"/>
+                    <xs:element name="Role" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Emprunts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Emprunt" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Utilisateur" type="xs:string"/>
+                    <xs:element name="Livre" type="xs:string"/>
+                    <xs:element name="DateEmprunt" type="xs:date"/>
+                    <xs:element name="DateRetour" type="xs:date"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
